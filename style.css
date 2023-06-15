@@ -25,7 +25,7 @@ h1{
 
 .caixa_principal{
   width: 30%;
-  height: 20rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,9 @@ h1{
   gap: 40px;
   border: 1px solid #000;
   color: #000;
-  background-color: #e0ee22;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px #000;
 }
 
 .caixa_altura{
@@ -48,8 +50,9 @@ button{
   cursor: pointer;
   padding: 15px 70px;
   font-family: 'Tilt Warp', cursive;
-  background-color: #fff;
-  transition: 0.8s;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
 }
 
 input{
@@ -58,7 +61,23 @@ input{
   padding: 5px;
 }
 
-button:hover{
-  background-color: #8d8d8d;
-  color: #fff;
+.novaCaixa{
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+}
+
+.vermelho{
+  background-color: #e01b1b !important;
+}
+
+.amarelo{
+  background-color: #dfe224 !important;
+}
+
+.verde{
+  background-color: #54e72f !important;
+}
+
+.cinza{
+  background-color: #535353 !important;
 }

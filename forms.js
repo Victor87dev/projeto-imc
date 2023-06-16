@@ -1,14 +1,19 @@
 const caixaPrincipal = document.getElementById("caixa_principal")
-const inputPeso = document.getElementById("input_peso")
-const inputAltura = document.getElementById("input_altura")
 const botao = document.getElementById("botao")
 
 let verifica = false 
 
+
+
 botao.addEventListener("click",(evt)=>{
-  const altura = (inputAltura.value * inputAltura.value)
-  const resultado = (inputPeso.value / altura).toFixed(2)
- 
+  let inputP = document.getElementById("input_peso").value 
+  let inputA = document.getElementById("input_altura").value
+  let inputPeso = parseFloat(inputP.replace(",",".")) 
+  let inputAltura = parseFloat(inputA.replace(",",".")) 
+
+  const altura = (inputAltura * inputAltura)
+  const resultado = (inputPeso / altura).toFixed(2)
+  
  if(!verifica){
     if(resultado <= 18.5){
     verifica = true
@@ -73,3 +78,7 @@ botao.addEventListener("click",(evt)=>{
 }
 })
 
+var a = "12,77"
+var b = "1,1"
+
+n1 = parseFloat(a.replace)

@@ -20,32 +20,28 @@ botao.addEventListener("click",(evt)=>{
     const div = document.createElement("div")
     div.setAttribute("id","result")
     div.setAttribute("class","novaCaixa")
-    div.innerHTML = `IMC: ${resultado}, Abaixo do peso`
-    caixaPrincipal.classList.add("class","cinza")
+    div.innerHTML = `IMC: ${resultado}`
     caixaPrincipal.appendChild(div)
     }else if(resultado > 18.5 && resultado <= 24.9) {
     verifica = true
     const div = document.createElement("div")
     div.setAttribute("id","result")
     div.setAttribute("class","novaCaixa")
-    div.innerHTML = `IMC: ${resultado}, Normal`
-    caixaPrincipal.classList.add("class","verde")
+    div.innerHTML = `IMC: ${resultado}`
     caixaPrincipal.appendChild(div)
     }else if(resultado > 24.9 && resultado <= 30){
     verifica = true  
     const div = document.createElement("div")
     div.setAttribute("id","result")
     div.setAttribute("class","novaCaixa")
-    div.innerHTML = `IMC: ${resultado}, Acima do peso`
-    caixaPrincipal.classList.add("class","amarelo")
+    div.innerHTML = `IMC: ${resultado}`
     caixaPrincipal.appendChild(div)
     }else{
     verifica = true
     const div = document.createElement("div")
     div.setAttribute("id","result")
     div.setAttribute("class","novaCaixa")
-    div.innerHTML = `IMC: ${resultado}, Obeso`
-    caixaPrincipal.classList.add("class","vermelho")
+    div.innerHTML = `IMC: ${resultado}`
     caixaPrincipal.appendChild(div)
     }
 }else{
@@ -53,32 +49,21 @@ botao.addEventListener("click",(evt)=>{
     if(resultado <= 18.5){
       const div = document.getElementById("result")
       div.innerHTML = ""
-      div.innerHTML += `IMC: ${resultado}, Abaixo do peso`
-      caixaPrincipal.classList.add("class","cinza")
-      caixaPrincipal.classList.remove("vermelho","amarelo","verde")
+      div.innerHTML += `IMC: ${resultado}, Abaixo do peso` 
     }else if(resultado > 18.5 && resultado <= 24.9){
       const div = document.getElementById("result")
       div.innerHTML = ""
-      div.innerHTML += `IMC: ${resultado}, Normal`
-      caixaPrincipal.classList.add("class","verde")
-      caixaPrincipal.classList.remove("vermelho","amarelo","cinza")
+      div.innerHTML += `IMC: ${resultado}`    
     }else if(resultado > 24.9 && resultado <= 30){
       const div = document.getElementById("result")
       div.innerHTML = ""
-      div.innerHTML += `IMC: ${resultado}, Acima do peso`
-      caixaPrincipal.classList.add("class","amarelo")
-      caixaPrincipal.classList.remove("vermelho","verde","cinza")
+      div.innerHTML += `IMC: ${resultado}` 
     }else{
       const div = document.getElementById("result")
       div.innerHTML = ""
-      div.innerHTML += `IMC: ${resultado}, Obeso`
-      caixaPrincipal.classList.add("class","vermelho")
-      caixaPrincipal.classList.remove("amarelo","verde","cinza")
+      div.innerHTML += `IMC: ${resultado}`  
     }
 }
 })
 
-var a = "12,77"
-var b = "1,1"
 
-n1 = parseFloat(a.replace)

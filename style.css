@@ -16,7 +16,11 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1d2b3a;
+  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 h1{
@@ -34,8 +38,9 @@ h1{
   border: 3px solid #000;
   color: #000;
   background-color: #1d2b3a;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 1px 1px 20px #000;
+  background: transparent;
 }
 
 .inputBox{
@@ -94,13 +99,93 @@ h1{
   color: #747474;
 }
 
-button{
-  cursor: pointer;
-  padding: 15px 70px;
-  font-family: 'Tilt Warp', cursive;
-  background-color: #000;
+.custom-btn {
+  width: 170px;
+  height: 40px;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Tilt Warp', cursive;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgb(90, 47, 68),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.botao {
+  background: #1d2b3a;
+background: linear-gradient(0deg, #1d2b3a 0%, #121c27 100%);
+  width: 170px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.botao span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.botao:before,
+.botao:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgb(170, 52, 117);
+  transition: all 0.3s ease;
+}
+.botao:before {
+  height: 0%;
+  width: 2px;
+}
+.botao:after {
+  width: 0%;
+  height: 2px;
+}
+.botao:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.botao:hover:before {
+  height: 100%;
+}
+.botao:hover:after {
+  width: 100%;
+}
+.botao span:hover{
+   color: rgb(170, 52, 117);
+}
+.botao span:before,
+.botao span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgb(170, 52, 117);
+  transition: all 0.3s ease;
+}
+.botao span:before {
+  width: 2px;
+  height: 0%;
+}
+.botao span:after {
+  width: 0%;
+  height: 2px;
+}
+.botao span:hover:before {
+  height: 100%;
+}
+.botao span:hover:after {
+  width: 100%;
 }
 
 .novaCaixa{

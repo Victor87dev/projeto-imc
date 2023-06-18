@@ -238,7 +238,11 @@ border-top: 1px solid #C5C7D3;
 tr{
   transition: 0.5s;
 }
-
+/*
 tbody > tr:hover {
 background-color: #ad1b53;
+}
+*/
+.resultadoSelecionado{
+  background-color: #ad1b53 !important;
 }

@@ -14,7 +14,6 @@ const altura = (inputAltura * inputAltura)
 const resultado = (inputPeso / altura).toFixed(2)
 
 
-tabela.setAttribute("class","transformarLetra")
 if(!verifica){
   verifica = true
   const div = document.createElement("div")
@@ -22,6 +21,7 @@ if(!verifica){
   div.setAttribute("class","novaCaixa")
   div.innerHTML = `IMC: ${resultado}`
   caixaPrincipal.appendChild(div)   
+  tabela.setAttribute("class","transformarLetra")
   caixaPrincipal.classList.add("class","caixaPrincipalAnimation")
   
 }else{  

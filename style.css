@@ -16,7 +16,7 @@ body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  background-image: url(imgSauda9.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -24,6 +24,7 @@ body{
 }
 
 h1{
+  color: #1d2b3a;
   font-family: 'Tilt Warp', cursive;
 }
 
@@ -63,7 +64,7 @@ h1{
   background: transparent;
   border-radius: 5px;
   outline: none;
-  color: #fff;
+  color: #1d2b3a;
   font-size: 1rem;
   transition: 0.5s;
 }
@@ -74,7 +75,7 @@ h1{
   padding: 10px;
   pointer-events: none;
   font-size: 1rem;
-  color: rgba(255,255,255,0.25);
+  color: #1d2b3a;
   transition: 0.5s;
 }
 
@@ -85,7 +86,7 @@ h1{
   transform: translateX(10px) translateY(-7px);
   font-size: 0.65rem;
   padding: 0 10px;
-  background: #752e4d;
+  background: #c3e0ff;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   letter-spacing: 0.2em;
@@ -119,7 +120,7 @@ h1{
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgb(90, 47, 68),
+   box-shadow:inset 2px 2px 2px 0px #08488d,
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
@@ -196,7 +197,7 @@ background: linear-gradient(0deg, #1d2b3a 0%, #121c27 100%);
 }
 
 .novaCaixa{
-  background-color: #752e4d;
+  background-color: #35b6c7;
   border-radius: 4px;
   padding: 10px;
   margin-top: -12px;
@@ -254,6 +255,6 @@ tr{
 
 .resultadoSelecionado{
   transition: all 1.0s;
-  background-color: #ad1b53 !important;
+  background-color: #35b6c7 !important;
 }
 

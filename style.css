@@ -60,7 +60,7 @@ h1{
 .inputBox input{
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid #000;
   background: transparent;
   border-radius: 5px;
   outline: none;

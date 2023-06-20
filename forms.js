@@ -1,7 +1,13 @@
 const caixaPrincipal = document.getElementById("caixa_principal")
 const botao = document.getElementById("botao")
+const tdLetras = [...document.querySelectorAll("td")]
+const thLetras = [...document.querySelectorAll("th")]
 
 let verifica = false 
+let verificarAnimacao = false
+let verificarAnimacao2 = false
+
+console.log(tdLetras) 
 
 botao.addEventListener("click",(evt)=>{
 let inputP = document.getElementById("input_peso").value 
@@ -12,6 +18,8 @@ let inputAltura = parseFloat(inputA.replace(",","."))
 const altura = (inputAltura * inputAltura)
 const resultado = (inputPeso / altura).toFixed(2)
 
+
+
 if(!verifica){
   verifica = true
   const div = document.createElement("div")
@@ -19,6 +27,7 @@ if(!verifica){
   div.setAttribute("class","novaCaixa")
   div.innerHTML = `IMC: ${resultado}`
   caixaPrincipal.appendChild(div)   
+
 }else{  
   const div = document.getElementById("result")
   div.innerHTML = ""
@@ -32,13 +41,16 @@ caixaSelecionada(inputPeso,inputAltura)
 const caixaSelecionada = (p,a)=>{
   const resultadoAltura = (a * a)
   const resultadoFinal = (p / resultadoAltura).toFixed(2)
-
+   
   const arrayTabelas = [...document.querySelectorAll(".itensTabela")]
-      
+  
   if(resultadoFinal < 18.5){
     arrayTabelas.map((el)=>{
       el.classList.remove("class","resultadoSelecionado")
       arrayTabelas[0].classList.add("class","resultadoSelecionado")
+      for(let i = 0;i<=tdLetras.length;i++){
+        tdLetras[i].setAttribute("class","transformarLetra")
+      }
     })
   }else if(resultadoFinal >= 18.5 && resultadoFinal <= 24.9){
    for(let i = 0;i <= arrayTabelas.length;i++){
@@ -64,3 +76,10 @@ const caixaSelecionada = (p,a)=>{
 
 }
 
+caixaPrincipal.classList.add("class","caixaPrincipalAnimation")
+for(let o = 0;o<=thLetras.length;o++){
+  thLetras[o].setAttribute("class","transformarLetraTh")
+}
+for(let i = 0;i<=tdLetras.length;i++){
+  tdLetras[i].setAttribute("class","transformarLetra")
+}

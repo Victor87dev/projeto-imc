@@ -42,7 +42,7 @@ h1{
   background: transparent;
   position: absolute;
   right: 450px;
-  transition: 2.0s;
+  transition: all 2.0s;
 }
 
 .caixaPrincipalAnimation{
@@ -223,42 +223,37 @@ background: linear-gradient(0deg, #1d2b3a 0%, #121c27 100%);
 
 table{
   background: transparent;
+  color: transparent;
   border-collapse:collapse;
   font-family: 'Inter', sans-serif;
   position: absolute;
-  right: 100px;
-}
-
-th {
-color: transparent;
-text-transform:uppercase;
-padding:8px;
-text-align:center;
-transition: all 2.0s;
-}
-
-.transformarLetraTh{
-  color: #000 !important;
-  transition: all 2.0s;
-}
-
-td {
-color: transparent;
-padding: 12px;
-text-align:center;
-transition: all 2.0s;
+  right: 50px;
+  transition: all 1.0s;
 }
 
 .transformarLetra{
+  right: 150px !important;
   color: #000 !important;
-  transition: all 2.0s;
+  transition: all 1.0s;
+}
+
+th {
+text-transform:uppercase;
+padding:8px;
+text-align:center;
+}
+
+td {
+padding: 12px;
+text-align:center;
 }
 
 tr{
-  transition: 0.5s;
+  transition: all 1.0s;
 }
 
 .resultadoSelecionado{
+  transition: all 1.0s;
   background-color: #ad1b53 !important;
 }
 

@@ -1,37 +1,54 @@
 const caixaPrincipal = document.getElementById("caixa_principal")
 const botao = document.getElementById("botao")
 const tabela = document.querySelector("table")
+const caixaBotao = document.getElementById("caixa_button")
+const inputP = document.getElementById("input_peso")
+const inputA = document.getElementById("input_altura")
 
 let verifica = false 
+let verificaDeletado = false 
 
 botao.addEventListener("click",(evt)=>{
-let inputP = document.getElementById("input_peso").value 
-let inputA = document.getElementById("input_altura").value
-let inputPeso = parseFloat(inputP.replace(",",".")) 
-let inputAltura = parseFloat(inputA.replace(",",".")) 
+const inputP = document.getElementById("input_peso").value 
+const inputA = document.getElementById("input_altura").value
+const inputPeso = parseFloat(inputP.replace(",",".")) 
+const inputAltura = parseFloat(inputA.replace(",",".")) 
 
 const altura = (inputAltura * inputAltura)
 const resultado = (inputPeso / altura).toFixed(2)
 
-
-if(!verifica){
-  verifica = true
-  const div = document.createElement("div")
-  div.setAttribute("id","result")
-  div.setAttribute("class","novaCaixa")
-  div.innerHTML = `IMC: ${resultado}`
-  caixaPrincipal.appendChild(div)   
-  tabela.setAttribute("class","transformarLetra")
-  caixaPrincipal.classList.add("class","caixaPrincipalAnimation")
+if(inputP != "" && inputA != ""){
+ 
+  if(!verifica){
+    verifica = true
+    const div = document.createElement("div")
+    div.setAttribute("id","result")
+    div.setAttribute("class","novaCaixa")
+    div.innerHTML = `IMC: ${resultado}`
+    caixaPrincipal.appendChild(div)   
+    tabela.setAttribute("class","transformarLetra")
+    caixaPrincipal.classList.add("class","caixaPrincipalAnimation")
+    botao.classList.add("class","botaoTamanho")
+    adicionarBotaoApagar()
+  }else{ 
+    if(verificaDeletado){
+      verificaDeletado = false
+      const div = document.createElement("div")
+      div.setAttribute("id","result")
+      div.setAttribute("class","novaCaixa")
+      div.innerHTML = `IMC: ${resultado}`
+      caixaPrincipal.appendChild(div)   
+    }else{
+      const div = document.getElementById("result")
+      div.innerHTML = ""
+      div.innerHTML += `IMC: ${resultado}`
+    }  
+  }
+  caixaSelecionada(inputPeso,inputAltura)
   
-}else{  
-  const div = document.getElementById("result")
-  div.innerHTML = ""
-  div.innerHTML += `IMC: ${resultado}`
+}else{
+  alert("Adicione Informações")
 }
-
-caixaSelecionada(inputPeso,inputAltura)
-
 })
 
 const caixaSelecionada = (p,a)=>{
@@ -40,7 +57,6 @@ const caixaSelecionada = (p,a)=>{
   
   const arrayTabelas = [...document.querySelectorAll(".itensTabela")]
 
- 
   if(resultadoFinal < 18.5){
     arrayTabelas.map((el)=>{
       el.classList.remove("class","resultadoSelecionado")
@@ -67,7 +83,33 @@ const caixaSelecionada = (p,a)=>{
       arrayTabelas[4].classList.add("class","resultadoSelecionado")
      }    
   }
-
 }
+
+const adicionarBotaoApagar = ()=>{
+  const buttonApagar = document.createElement("button")
+  buttonApagar.setAttribute("type","button")
+  buttonApagar.setAttribute("id","botaoApagar")
+  buttonApagar.setAttribute("class","botao custom-btn")
+  buttonApagar.classList.add("class","botaoTamanho")
+  buttonApagar.setAttribute("onclick","apagandoInput()")
+  const palavraApagar = document.createElement("span")
+  palavraApagar.innerHTML = "Apagar"
+  buttonApagar.appendChild(palavraApagar)
+  caixaBotao.appendChild(buttonApagar)
+}
+
+const apagandoInput = ()=>{
+  verificaDeletado = true
+  inputP.value = ""
+  inputA.value = ""
+  const div = document.getElementById("result")
+  caixaPrincipal.removeChild(div)
+  const arrayTabelas = [...document.querySelectorAll(".itensTabela")]
+  for(let i = 0;i <= arrayTabelas.length;i++){
+    arrayTabelas[i].classList.remove("class","resultadoSelecionado")
+   } 
+}
+
+
 
 

@@ -107,6 +107,12 @@ h1{
   color: #747474;
 }
 
+.caixa_button{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .custom-btn {
   width: 170px;
   height: 40px;
@@ -126,15 +132,18 @@ h1{
   outline: none;
 }
 
+
 .botao {
   background: #1d2b3a;
-background: linear-gradient(0deg, #1d2b3a 0%, #121c27 100%);
+  background: linear-gradient(0deg, #1d2b3a 0%, #121c27 100%);
   width: 170px;
   height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
-  
+}
+.botaoTamanho{
+  width: 120px !important;
 }
 .botao span {
   position: relative;

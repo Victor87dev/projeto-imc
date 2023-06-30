@@ -267,14 +267,14 @@ tr{
   background-color: #35b6c7 !important;
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1300px) and (max-width: 1500px) {
   
 .caixaPrincipalAnimation{
-  left: 90px !important;
+  left: 200px !important;
 
 }
 
 .transformarLetra{
-  right: 50px !important;
+  right: 120px !important;
 }
 }

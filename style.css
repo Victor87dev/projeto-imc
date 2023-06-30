@@ -47,7 +47,7 @@ h1{
 }
 
 .caixaPrincipalAnimation{
-  left: 180px !important;
+  left: 260px !important;
   transition: 2.0s;
 }
 
@@ -242,7 +242,7 @@ table{
 }
 
 .transformarLetra{
-  right: 150px !important;
+  right: 380px !important;
   color: #000 !important;
   transition: all 1.0s;
 }

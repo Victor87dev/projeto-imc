@@ -21,6 +21,7 @@ body{
   background-position: center;
   position: relative;
   overflow: hidden;
+  font-weight: 1000;
 }
 
 h1{
